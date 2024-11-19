@@ -107,7 +107,7 @@
 
     const MAP_ACCESS_TOKEN = 'pk.eyJ1IjoiZHVkdXMxMDExIiwiYSI6ImNtMWtxdjkydTAwc3Mya3NsbGlpbjFiM2YifQ.w-uW_GSRBAHTlunGVNt6LQ'
 
-    map = L.map("map", options).setView([52.403499, 16.923179], 16.44);
+    map = L.map("map", options).setView({{ center_coordinates }}, 16.44);
     L.tileLayer(
         'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
          {

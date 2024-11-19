@@ -49,10 +49,11 @@
         e.preventDefault();
 
         const formData = new FormData(form);
+        formData.append('city', '{{city}}');
         document.getElementById('foundRoutes').innerHTML = '<span id="loader" class="show"></span>';
 
         try {
-            const routeResponse = await fetch('/find-route/', {
+            const routeResponse = await fetch('{% url 'route_search:FindRoute' %}', {
                 method: 'POST',
                 body: formData,
                 headers: {
